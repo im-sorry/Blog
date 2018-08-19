@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="EditPlus®">
+	<meta name="Author" content="辣手摧花">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="潭州课堂左侧边框栏">
+	<title>案例2</title>
+	<style type="text/css">
+		body,p,ul,a{margin:0;padding:0;}
+		body{height:1000px;}
+		ul{list-style:none}
+		a{text-decoration:none;color:inherit;}
+		body{
+			font-size:16px;
+			font-family:'微软雅黑';
+			color:white;
+		}
+		.side-nav:before{
+			content:'';
+			position:absolute;
+			left:-87px;
+			top:50px;
+			display:block;
+			z-index:-1;
+			width:1500px;
+			height:300px;
+			background-color:rgb(68,27,121);
+		}
+		.side-nav{
+			position:relative;
+			width:220px;
+			height:480px;
+			margin:100px 0 0 50px;
+		}
+		.side-nav .top-menu{
+			width:100%;
+			height:50px;
+			background-color:rgb(24,142,238);
+			text-indent:41px;
+			line-height:50px;
+			overflow:hidden;
+		}
+		.side-nav .top-menu .icon{
+			display:inline-block;
+			position:relative;
+			left:-25px;
+			top:2px;
+		}
+		.side-nav .top-menu .icon i{
+			display:block;
+			width:20px;
+			height:2px;
+			background-color:white;
+			margin-top:5px;
+		}
+		.side-nav .n-list{
+			position:relative;
+			width:100%;
+			height:430px;
+		}
+		.side-nav .n-list li{
+			width:100%;
+			height:70px;
+			background-color:rgba(0,0,255,.9);
+			overflow:hidden;
+		}
+		.side-nav .n-list li + li{
+			border-top:1px solid rgb(4,119,192);
+		}
+		.side-nav .n-list li .icon-right{
+			position:relative;
+			float:right;
+			top:10px;
+			right:20px;
+			font-weight:bold;
+			color:rgb(151,210,247);
+		}
+		.side-nav .n-list li .main-menu{
+			margin:10px 0 0 15px;
+		}
+		.side-nav .n-list li .decp{
+			margin:5px 0 0 15px;
+			float:left;
+			font-size:14px;
+			color:rgb(151,210,247);
+		}
+		.side-nav .n-list li .decp + .decp{
+			margin-left:5px;
+		}
+		.side-nav .n-list li .content{
+			display:none;
+			position:absolute;
+			width:980px;
+			height:425px;
+			left:100%;
+			top:0px;
+		}
+		.side-nav .n-list li .content1{
+			background-color:pink;
+		}
+		.side-nav .n-list li .content2{
+			background-color:green;
+		}
+		.side-nav .n-list li .content3{
+			background-color:skyblue;
+		}
+		.side-nav .n-list li .content4{
+			background-color:red;
+		}
+		.side-nav .n-list li .content5{
+			background-color:purple;
+		}
+		.side-nav .n-list li .content6{
+			background-color:yellow;
+		}
+		.side-nav .n-list li:hover .content{
+			display:block;
+		}
+	</style>
+</head>
+<body>
+	<div class="side-nav">
+		<div class="top-menu">
+			<div class="icon">
+				<i></i>
+				<i></i>
+				<i></i>
+			</div>
+			全部课程
+		</div>
+		<ul class="n-list">
+			<li>
+				<i class="icon-right">></i>
+				<p class="main-menu"><a href="#">IT·互联网</a></p>
+				<p class="decp"><a href="#">前端开发</a></p>
+				<p class="decp"><a href="#">Linux运维</a></p>
+				<div class="content content1"></div>
+			</li>
+			<li>
+				<i class="icon-right">></i>
+				<p class="main-menu"><a href="#">设计·创作</a></p>
+				<p class="decp"><a href="">平面设计</a></p>
+				<p class="decp"><a href="">游戏美术设计</a></p>
+				<p class="decp"><a href="">CAD</a></p>
+				<div class="content content2"></div>
+			</li>
+			<li>
+				<i class="icon-right">></i>
+				<p class="main-menu"><a href="#">语言·留学</a></p>
+				<p class="decp"><a href="">实用口语雅思托福</a></p>
+				<div class="content content3"></div>
+			</li>
+			<li>
+				<i class="icon-right">></i>
+				<p class="main-menu"><a href="#">职业·考证</a></p>
+				<p class="decp"><a href="">公务员教师考试建造工程</a></p>
+				<div class="content content4"></div>
+			</li>
+			<li>
+				<i class="icon-right">></i>
+				<p class="main-menu"><a href="#">升学·考研</a></p>
+				<p class="decp"><a href="">考研大学高中初中</a></p>
+				<div class="content content5"></div>
+			</li>
+			<li>
+				<i class="icon-right">></i>
+				<p class="main-menu"><a href="#">兴趣·生活</a></p>
+				<p class="decp"><a href="">摄影乐器美妆育儿</a></p>
+				<div class="content content6"></div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

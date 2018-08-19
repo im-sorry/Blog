@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="EditPlus®">
+	<meta name="Author" content="辣手摧花">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<title>qq空间</title>
+	<style type="text/css">
+		body,p,a,ul{margin:0;padding:0;}
+		a{text-decoration:none;color:inherit;}
+		ul{list-style:none}
+		body{
+			width:1347px;
+			height:550px;
+		}
+		.pic{
+			margin:50px 0 0 20%;
+		}
+		.login{
+			position:relative;
+			overflow:hidden;
+			width:420px;
+			height:300px;
+			margin-top:-80px;
+			margin-left:60%;
+			background-color:white;
+			border-radius:5px;
+		}
+		.login .login1,.login .login2{
+			width:100%;
+			height:100%;
+		}
+		.login .login1 .l-top{
+			width:270px;
+			height:70px;
+			margin:5px auto;
+		}
+		.login .l-top p{
+			width:100%;
+			height:50%;
+			text-align:center;
+			line-height:35px;
+		}
+		.login .l-top p:nth-child(1){
+			font-size:18px;
+			font-family:'微软雅黑';
+		}
+		.login .l-top p > a{
+			color:blue;
+		}
+		.login .login1 .l-input{
+			width:270px;
+			height:150px;
+			margin:auto;
+		}
+		.login .login1 .l-input input{
+			width:270px;
+			height:40px;
+			margin-top:10px;
+			border:1px solid #c2c2c2;
+			font-size:17px;
+			text-indent:10px;
+			border-radius:5px;
+		}
+		input[type="submit"]{
+			background-color:#339900;
+			cursor:pointer;
+		}
+		.login .l-help{
+			position:absolute;
+			right:0px;
+			bottom:0px;
+			width:245px;
+			height:20px;
+			font-size:13px;
+			color:#777777;
+		}
+		.login .login2{
+			display:none;
+		}
+		.login .login2 .l-pic{
+			padding-left:123px;
+		}
+		.login .login2 .l-pic img{
+			width:80px;
+			height:80px;
+			border:1px solid #c1c1c1;
+		}
+		.login .login2 .l-pic .l-head-pic{
+			position:relative;
+			display:inline-block;
+			margin-left:6px;
+			vertical-align:top;
+		}
+		.login .login2 .l-pic .l-head-pic p.account{
+			display:none;
+			position:absolute;
+			top:67px;
+			left:2px;
+			width:78px;
+			height:auto;
+			text-align:center;
+			font-size:11px;
+			color:white;
+			background-color:rgba(0,0,0,.5);
+		}
+		.login .login2 .l-pic .l-head-pic:hover img{
+			box-shadow:0 0 3px 2px #6037ff;
+		}
+		.login .login2 .l-pic .l-head-pic:hover p{
+			display:block;
+			text-decoration:none;
+		}
+		.login .login2 .l-pic .l-head-pic p.name{
+			width:82px;
+			text-align:center;
+			font-size:14px;
+			color:#868686;
+		}
+		.change{
+			position:absolute;
+			top:48px;
+			left:147px;
+			color:blue;
+		}
+		.change:focus{
+			text-decoration:underline;
+			opacity:0;
+		}
+		.change:focus + .login1{
+			display:none;
+		}
+		.change:focus ~ .login2{
+			display:block;
+		}
+		.login .login1 a:hover{
+			text-decoration:underline;
+		}
+		.icon-login{
+			top:-50px;
+			left:0px;
+			margin:20px auto 0px;
+			width:320px;
+			height:50px;
+		}
+		.icon-login a{
+			position:relative;
+			top:0px;
+			float:left;
+			display:block;
+			width:49px;
+			height:50px;
+			margin-left:10px;
+			line-height:17px;
+			text-align:center;
+			font-family:'微软雅黑';
+			font-size:12px;
+			color:white;
+			transition:.3s;
+		}
+		.icon-login a i{
+			display:block;
+			width:30px;
+			height:25px;
+			margin:auto;
+			background:url('images/icon.png') no-repeat 0px 0px;
+		}
+		.icon-login a:hover{
+			top:-10px;
+		}
+		.introduce{
+			width:750px;
+			height:60px;
+			margin:75px auto;
+			font-size:12px;
+			color:white;
+			font-family:'微软雅黑';
+		}
+		.introduce p + p{
+			margin-top:5px;
+			text-align:center;
+		}
+		.introduce p a:hover{
+			text-decoration:underline;
+		}
+		.bg-change{
+			position:absolute;
+			top:0px;
+			left:0px;
+			min-width:1347px;
+			min-height:600px;
+			width:100%;
+			height:100%;
+			z-index:-5;
+		}
+		.bg-change div{
+			position:absolute;
+			top:0px;
+			left:0px;
+			width:100%;
+			height:100%;
+			z-index:-5;
+			background:no-repeat 0 0/100% 100%;
+			animation:go 20s infinite linear;
+		}
+		.bg-change .pic0{
+			z-index:-100;
+			animation:none;
+		}
+		.bg-change div + div{
+			opacity:0;
+		}
+		@keyframes go{
+			0%{opacity:0;}
+			25%{opacity:1;}
+			50%{opacity:0;}
+			75%{opacity:0;}
+			100%{opacity:0;}
+		}
+	</style>
+</head>
+<body>
+	<div class="bg-change">
+		<div class="pic0" style="background-image:url(images/bg.jpg)"></div>
+		<div class="pic1" style="background-image:url(images/bg.jpg); animation-delay:1s;"></div>
+		<div class="pic2" style="background-image:url(images/bg1.jpg); animation-delay:5s;"></div>
+		<div class="pic3" style="background-image:url(images/bg2.jpg); animation-delay:10s;"></div>
+		<div class="pic4" style="background-image:url(images/bg3.jpg); animation-delay:15s;"></div>
+	</div>
+	<div class="pic">
+		<a href="#"><img src="images/logo.png" alt=""></a>
+	</div>
+	<div class="login">
+		<a href="#" class="change">快速安全登录</a>
+		<div class="login1">
+			<div class="l-top">
+				<p>账号密码登录</p>
+				<p>推荐使用<a href="#">快速安全登录</a>，防止盗号。</p>
+			</div>
+			<div class="l-input">
+				<form action="#">
+					<input type="text" placeholder="支持QQ号/邮箱/手机号登录">
+					<input type="password" placeholder="密码"><br>
+					<input type="submit" name="submit" value="登录">
+				</form>
+			</div>
+			<div class="l-help">
+				<span><a href="#">忘了密码?</a></span> |
+				<span><a href="#">注册新账号</a></span> |
+				<span><a href="#">意见反馈</a></span>
+			</div>
+		</div>
+		<div class="login2">
+			<div class="l-top">
+				<p>快速安全登录</p>
+				<p>请使用<a href="#">QQ手机版</a>扫描二维码,</p>
+				<p>或点击头像授权登录.</p>
+			</div>
+			<div class="l-pic">
+				<img src="images/wx.png" alt="" class="pic1">
+				<div id="" class="l-head-pic">
+					<a href="#">
+						<img src="images/wode.jpg" alt="" class="pic2">
+						<p class="account">1223614734</p>
+						<p class="name">南栀北港</p>
+					</a>
+				</div>
+			</div>
+			<div class="l-help">
+				<span><a href="#">账号密码登录</a></span> |
+				<span><a href="#">注册新账号</a></span> |
+				<span><a href="#">意见反馈</a></span>
+			</div>
+		</div>
+	</div>
+	<div class="icon-login">
+				<a href="#">
+					<i style="background-position:-61px -76px;"></i>
+					<span>iPhone</span>
+				</a>
+				<a href="#">
+					<i style="background-position:-61px -105px;"></i>
+					<span>iPad</span>
+				</a>
+				<a href="#">
+					<i style="background-position:-91px -44px;"></i>
+					<span>Android</span>
+				</a>
+				<a href="#">
+					<i style="background-position:-88px -103px;"></i>
+					<span>Windows Phone</span>
+				</a>
+				<a href="#">
+					<i style="background-position:-87px -75px;"></i>
+					<span>其他手机</span>
+				</a>
+	</div>
+	<div class="introduce">
+		<p>
+		<span class="">
+		<a href="#">反馈建议
+		</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class=""><a href="#">官方空间
+		</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class=""><a href="#">空间活动</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class=""><a href="#">空间应用</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class=""><a href="#">腾讯原创馆</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class=""><a href="#">QQ互联</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class=""><a href="#">QQ登录</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class=""><a href="#">社交组件</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class=""><a href="#">应用侵权投</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class=""><a href="#">Complaint Guidelines
+		</a></span>
+		</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html><html><head><title>第七章</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="第七章">第七章</h1>
+
+
+
+<h2 id="选择器优先级样式优先级常用css3">选择器优先级+样式优先级+常用css3</h2>
+
+<hr>
+
+
+
+<h3 id="一选择器优先级">一.选择器优先级</h3>
+
+<blockquote>
+  <ul><li><strong>后写的相同选择器会覆盖前面的</strong></li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs dts"><div class="hljs-line"><span class="hljs-params">&lt;head&gt;</span>
+</div><div class="hljs-line">    .box{
+</div><div class="hljs-line"><span class="hljs-symbol">    width:</span><span class="hljs-number">500</span>px;
+</div><div class="hljs-line"><span class="hljs-symbol">    height:</span><span class="hljs-number">500</span>px;
+</div><div class="hljs-line"><span class="hljs-symbol">    background:</span>Red;
+</div><div class="hljs-line">}
+</div><div class="hljs-line">    .box{
+</div><div class="hljs-line"><span class="hljs-symbol">    width:</span><span class="hljs-number">50</span>px;
+</div><div class="hljs-line"><span class="hljs-symbol">    height:</span><span class="hljs-number">50</span>px;
+</div><div class="hljs-line"><span class="hljs-symbol">    background:</span>green;
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><span class="hljs-params">&lt;/head&gt;</span>
+</div><div class="hljs-line"><span class="hljs-params">&lt;html&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-params">&lt;div class='box'&gt;</span><span class="hljs-params">&lt;/div&gt;</span>
+</div><div class="hljs-line"><span class="hljs-params">&lt;/html&gt;</span>
+</div></code></pre>
+
+<blockquote>
+  <ul><li><strong>后代选择器的优先级情况</strong> <br>
+  <ol>
+  <li rel="1">ID选择器 &gt; class选择器 &gt; 标签选择器</li>
+  <li rel="2">ID选择器个数不相等,ID个数多的优先级高</li>
+  <li rel="3">ID选择器个数相等,则看class选择器个数,个数多者优先级高</li>
+  <li rel="4">class个数相等,则看标签选择器个数</li>
+  <li rel="5">选择器个数相同,顺序不一样,他们的优先级是一样的 <br>
+  <pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">
+</div><div class="hljs-line"><span class="hljs-selector-id">#wrap</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span>.list{}
+</div><div class="hljs-line">
+</div><div class="hljs-line"><span class="hljs-selector-class">.wrap</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> #list{}
+</div></code></pre></li></ol></li>
+  </ul>
+  
+  <p><code>选择器的使用原则就是准确控制选中元素</code></p>
+</blockquote>
+
+<h3 id="二样式优先级">二.样式优先级</h3>
+
+<blockquote>
+  <ul><li><strong>行内样式</strong></li>
+  <li><strong>内部样式</strong></li>
+  <li><strong>外部样式</strong></li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs sml"><div class="hljs-line">&lt;link rel=<span class="hljs-symbol">'stylesheet'</span> <span class="hljs-keyword">type</span>=<span class="hljs-symbol">'text</span>/css' href=<span class="hljs-symbol">'url</span>.css' /&gt;
+</div></code></pre>
+
+<blockquote>
+  <p><code>注意:外部样式需要设置编码 @charset 'UTF-8';</code> <br>
+  外部样式 = (跟顺序有关)内部样式 &lt; 行内样式 <br>
+  <code>补充:</code> <br>
+  <code>1. @import url(style.css);样式引入</code> <br>
+  <code>2. !important 提升优先级(最高)</code></p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">div</span>{<span class="hljs-attribute">background</span>:red <span class="hljs-meta">!important</span>;}
+</div></code></pre>
+
+
+
+<h3 id="三常用css3样式">三.常用css3样式</h3>
+
+<blockquote>
+  <ul><li><p><strong>圆角的写法</strong></p>
+  
+  <ol>
+  <li rel="1">border-radius:0px 0px 0px 0px;</li>
+  <li rel="2">border-radius:0px 0px 0px;</li>
+  <li rel="3">border-radius:0px 0px;</li>
+  <li rel="4">border-radius:0px;</li></ol></li>
+  <li><p><strong>圆角单样式写法</strong></p>
+  
+  <ol>
+  <li rel="1">border-top-left-radius</li>
+  <li rel="2">border-top-right-radius</li>
+  <li rel="3">border-bottom-right-radius</li>
+  <li rel="4">border-bottom-left-radius</li></ol></li>
+  <li><p><strong>圆形</strong> <br>
+  border-radius:50%;</p></li>
+  <li><p><strong>盒子阴影</strong> <br>
+  box-shadow:0px 0px 0px 0px color; <br>
+  <code>1. 第一个值 代表水平偏移量(必需)</code> <br>
+  <code>2. 第二个值 代表垂直偏移量(必须)</code> <br>
+  <code>3. 第三个值 模糊半径(可选)</code> <br>
+  <code>4. 第四个值 阴影大小(可选)</code> <br>
+  <code>5. 第五个值 阴影颜色值(可选)</code> <br>
+  <code>6.inset 内部</code></p></li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs maxima"><div class="hljs-line"><span class="hljs-built_in">box</span>-shadow:<span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">color</span>;
+</div></code></pre>
+
+<blockquote>
+  <ul><li><strong>超出隐藏</strong> <br>
+  overflow内容溢出处理方式 <br>
+  <ol>
+  <li rel="1">visible 默认可见</li>
+  <li rel="2">hidden 超出隐藏</li>
+  <li rel="3">scroll 出现滚动条</li>
+  <li rel="4">auto 根据内容情况来决定是否出现滚动条</li>
+  <li rel="5">单独给一个轴给超出处理方法 overflow-x/y:;另一个值就是auto</li></ol></li>
+  </ul>
+</blockquote>
+
+<h3 id="四总结">四.总结</h3></div></body></html>

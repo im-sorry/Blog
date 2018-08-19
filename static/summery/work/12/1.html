@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="EditPlus®">
+	<meta name="Author" content="辣手摧花">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<title>快递货单</title>
+	<style type="text/css">
+		body,p,h3{margin:0;padding:0;}
+		body{
+			color:white;
+			font-family:'微软雅黑';
+		}
+		table{
+			border-collapse:collapse;
+			table-layout:fixed;
+		}
+		input[type="text"]{
+			width:150px;
+			height:20px;
+		}
+		input[name="goodsnum"],input[name="goodsweight"]{
+			width:50px;
+			height:20px;
+		}
+		input[name="goodsname"]{
+			width:420px;
+		}
+		.wrap{
+			width:600px;
+			padding:25px 15px;
+			background-color:rgb(81,81,81);
+			margin:50px auto;
+		}
+		.submit{
+			margin:auto;
+		}
+	</style>
+</head>
+<body>
+	<form class="wrap" action="#">
+		<h3>增加快递信息</h3>
+		<fieldset>
+			<legend>发货单</legend>
+			<table>
+				<tr>
+					<td>发货人:</td>
+					<td><input type="text" name="sender"/></td>
+					<td>地址:</td>
+					<td><input type="text" name="senderaddress"/></td>
+				</tr>
+				<tr>
+					<td>电话:</td>
+					<td><input type="text" name="tel"/></td>
+					<td>邮编:</td>
+					<td><input type="text" name="email"/></td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>收货单</legend>
+			<table>
+				<tr>
+					<td>收货人:</td>
+					<td><input type="text" name="receiver"/></td>
+					<td>地址:</td>
+					<td><input type="text" name="receiveraddress"/></td>
+				</tr>
+				<tr>
+					<td>电话:</td>
+					<td><input type="text" name="receivertel"/></td>
+					<td>邮编:</td>
+					<td><input type="text" name="receiveremail"/></td>
+				</tr>
+				<tr>
+					<td>地区:</td>
+					<td>
+						<select name="address">
+							<option value="guangzhou" selected>广州</option>
+							<option value="beijing">北京</option>
+							<option value="shanghai">上海</option>
+							<option value="hunan">湖南</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>包装:</td>
+					<td>
+						<input type="checkbox" name="package" value="carton">纸箱
+						<input type="checkbox" name="package" value="wooden-case">纸箱
+						<input type="checkbox" name="package" value="courier">快递袋
+						<input type="checkbox" name="package" value="other">其他
+					</td>
+				</tr>
+				<tr>
+					<td>付款方式:</td>
+					<td>
+						<input type="radio" name="payment" value="cash">现金
+						<input type="radio" name="payment" value="Alipay" checked>支付宝
+						<input type="radio" name="payment" value="CyberBank">网银
+						<input type="radio" name="payment" value="ATM">ATM
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>货物信息</legend>
+			<table>
+				<tr>
+					<td>货物名称:</td>
+					<td colspan='3'><input type="text" name="goodsname"/></td>
+				</tr>
+				<tr>
+					<td>数量:</td>
+					<td><input type="text" name="goodsnum"/>重量:</td>
+					<td><input type="text" name="goodsweight"/>发货时间:</td>
+					<td><input type="text" name="sendtime"/></td>
+				</tr>
+			</table>
+		</fieldset>
+		<div class="submit">
+			<input type="submit">
+			<input type="reset">
+		</div>
+	</form>
+</body>
+</html>

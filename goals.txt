@@ -1,0 +1,8 @@
+question:
+导航栏刷新之后会回到初始状态
+solution:
+子组件加载后发送viewId给router-view, 父组件接受并调整导航栏当前选中状态
+
+
+functions
+优化了时间获取

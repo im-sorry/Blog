@@ -1,0 +1,109 @@
+<!DOCTYPE html><html><head><title>第九章</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="第九章">第九章</h1>
+
+
+
+<h2 id="定位属性position">定位属性position</h2>
+
+<hr>
+
+
+
+<h3 id="一什么是定位">一.什么是定位</h3>
+
+
+
+<h3 id="二默认定位static">二.默认定位static</h3>
+
+<blockquote>
+  <ul><li><strong>浏览器默认位置,元素的正常 位置</strong> <br>
+  <ol>
+  <li rel="1">直接设置left/right/bottom/top 无效过</li>
+  <li rel="2">z-index层级也不会有效果</li></ol></li>
+  </ul>
+</blockquote>
+
+
+
+<h3 id="三相对定位relative">三.相对定位relative</h3>
+
+<blockquote>
+  <ol><li rel="1">相对于它本身正常位置发生位置改变</li>
+  <li rel="2">通过 left/top/right/bottom 属性来改变位置</li>
+  <li rel="3">特点 <br>
+  <code>1. 不使元素脱离文档</code> <br>
+  <code>2. 不影响元素本身特性</code> <br>
+  <code>3. 如果没有设置定位偏移量,对元素本身没有任何影响</code> <br>
+  <code>4. 就算元素发生位置改变,但它任然占据着它原来位置的空间</code></li>
+  </ol>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs maxima"><div class="hljs-line"><span class="hljs-built_in">li</span>{
+</div><div class="hljs-line">    <span class="hljs-built_in">width</span>:50px;
+</div><div class="hljs-line">    <span class="hljs-built_in">height</span>:50px;
+</div><div class="hljs-line">    <span class="hljs-built_in">background</span>:red;
+</div><div class="hljs-line">    list-<span class="hljs-built_in">style</span>:none;
+</div><div class="hljs-line">}
+</div><div class="hljs-line">.<span class="hljs-built_in">box</span>{
+</div><div class="hljs-line">    <span class="hljs-built_in">position</span>:relative;
+</div><div class="hljs-line">    left:100px;
+</div><div class="hljs-line">}
+</div><div class="hljs-line">&lt;ul&gt;
+</div><div class="hljs-line">    &lt;<span class="hljs-built_in">li</span>&gt;&lt;/<span class="hljs-built_in">li</span>&gt;
+</div><div class="hljs-line">    &lt;<span class="hljs-built_in">li</span> class='<span class="hljs-built_in">box</span>'&gt;&lt;/<span class="hljs-built_in">li</span>&gt;
+</div><div class="hljs-line">    &lt;<span class="hljs-built_in">li</span>&gt;&lt;/<span class="hljs-built_in">li</span>&gt;
+</div><div class="hljs-line">&lt;/ul&gt;
+</div></code></pre>
+
+
+
+<h3 id="四绝对定位absolute">四.绝对定位absolute</h3>
+
+<ol><li rel="1">相对于已经定位的上级元素来发生位置改变 <br>
+<code>定位上级包括(参照物):relative,absolute,fixed</code></li>
+<li rel="2">通过 left/top/right/bottom 属性来改变位置</li>
+<li rel="3">特点 <br>
+<code>1. 完全脱离文档流</code> <br>
+<code>2. 行内元素支持宽高</code> <br>
+<code>3. 块级元素内容撑开宽高</code> <br>
+<code>4. 没有上级定位则相对于body</code> <br>
+<code>5. 配合上一级定位一起使用</code> <br>
+<code>6. margin:auto;无效</code></li>
+</ol>
+
+<pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">.box{
+</div><div class="hljs-line">    <span class="hljs-attribute">width</span>:<span class="hljs-number">50px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">50px</span>;<span class="hljs-attribute">border</span>:<span class="hljs-number">1px</span> solid red;<span class="hljs-attribute">position</span>:relative;
+</div><div class="hljs-line">}
+</div><div class="hljs-line">.box-<span class="hljs-number">1</span>{
+</div><div class="hljs-line">    <span class="hljs-attribute">width</span>:<span class="hljs-number">20px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">20px</span>;<span class="hljs-attribute">background</span>:red;<span class="hljs-attribute">position</span>:absolute;<span class="hljs-attribute">left</span>:<span class="hljs-number">50px</span>;
+</div><div class="hljs-line">}
+</div><div class="hljs-line">&lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">'box'</span>&gt;
+</div><div class="hljs-line">    &lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">'box-1'</span>&gt;&lt;/div&gt;
+</div><div class="hljs-line">&lt;/div&gt;
+</div></code></pre>
+
+
+
+<h3 id="五固定定位fixed">五.固定定位fixed</h3>
+
+<ol><li rel="1">相对于浏览器窗口定位</li>
+<li rel="2">随着内容一起滚动</li>
+</ol>
+
+
+
+<h3 id="六层级z-index">六.层级z-index</h3>
+
+
+
+<h3 id="七总结">七.总结</h3></div></body></html>

@@ -1,0 +1,40 @@
+@charset "utf-8";
+body{
+	background-image: -webkit-linear-gradient(top right, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+	background-image: -o-linear-gradient(top right, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+	background-image: linear-gradient(to top left, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+	background-repeat: no-repeat;
+}
+.wrap{
+	border:1px solid rgba(255,166,34,.2);
+}
+.leftInfo{
+	
+}
+.rightInfo > p{
+	color:rgb(255,166,34);
+}
+.time{
+	color:skyblue;
+}
+.content{
+	
+}
+#sendMsg{
+}
+.menu{
+	background-image: linear-gradient(to left, #e14fad 0%, #f9d423 100%);
+}
+.arrowTop{
+	background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+#onlineSlide li{
+	background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+.onlineNum{
+	color:rgb(249,93,6);
+}
+input[type="button"], button{
+	background-image: linear-gradient(to right, #48c6ef 0%, #6f86d6 100%);
+	color:white;
+}

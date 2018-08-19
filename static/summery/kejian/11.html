@@ -1,0 +1,127 @@
+<!DOCTYPE html><html><head><title>第十一章</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="第十一章">第十一章</h1>
+
+
+
+<h2 id="表单-form">表单 form</h2>
+
+<hr>
+
+
+
+<h3 id="一定义">一.定义</h3>
+
+<blockquote>
+  <ol><li rel="1">form表单是一个包含表单的元素区域</li>
+  <li rel="2">表单元素是允许用户在表单中(<code>文本域.下拉列表.单选框.复选框等</code>)输入信息的元素</li>
+  </ol>
+</blockquote>
+
+
+
+<h3 id="二form详解">二.form详解</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs oxygene">&lt;form action=<span class="hljs-string">''</span> <span class="hljs-function"><span class="hljs-keyword">method</span>='' <span class="hljs-title">name</span>='' <span class="hljs-title">target</span>=''&gt;&lt;/<span class="hljs-title">form</span>&gt;</span><br></code></pre>
+
+<blockquote>
+  <ol><li rel="1">action 规定当提交表单时向何处发送表单数据</li>
+  <li rel="2">method 规定用于发送数据的方法<code>get/post</code></li>
+  <li rel="3">name 名字</li>
+  <li rel="4">target 规定action属性中提交的页面会在何处打开<code>_blank/_self</code></li>
+  </ol>
+</blockquote>
+
+
+
+<h3 id="三form中的控件-input">三.form中的控件 input</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs delphi">&lt;input <span class="hljs-keyword">type</span>=<span class="hljs-string">''</span> <span class="hljs-keyword">name</span>=<span class="hljs-string">''</span> value=<span class="hljs-string">''</span>/&gt;<br></code></pre>
+
+<blockquote>
+  <ol><li rel="1">type中的类型有 <br>
+  <code>1. text 文本</code> <br>
+  <code>2. password 密码</code> <br>
+  <code>3. radio 名字 指定相同的name</code> <br>
+  <code>4. checkbox 复选框</code> <br>
+  <code>1)label 标签为input元素定义标注</code></li>
+  </ol>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs stylus">&lt;<span class="hljs-selector-tag">input</span> type=<span class="hljs-string">'radio'</span> name=<span class="hljs-string">''</span> id=<span class="hljs-string">'a'</span>/&gt;<br>&lt;<span class="hljs-selector-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">'a'</span>&gt;**&lt;/label&gt;<br><span class="hljs-keyword">for</span>属性应当与相关元素的id<br></code></pre>
+
+<blockquote>
+  <p><code>2)checked 属性定义默认选中的input元素</code></p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs delphi">&lt;input <span class="hljs-keyword">type</span>=<span class="hljs-string">'checkbox'</span> <span class="hljs-keyword">name</span>=<span class="hljs-string">'checked'</span>/&gt;<br></code></pre>
+
+<blockquote>
+  <p><code>3)disabled 属性规定应该禁用input元素</code></p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs delphi">&lt;input <span class="hljs-keyword">type</span>=<span class="hljs-string">'checkbox'</span> <span class="hljs-keyword">name</span>=<span class="hljs-string">'disabled'</span>/&gt;<br></code></pre>
+
+<blockquote>
+  <p><code>5. submit 提交form中的数据</code> <br>
+  <code>6. reset 重置</code> <br>
+  <code>7. button 按钮</code> <br>
+  <code>8. image 图片(有提交功能)</code> <br>
+  <code>9. hidden 隐藏</code> <br>
+  <code>10. select/option 下拉选框 (高度的支持不兼容)</code></p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs scilab">&lt;<span class="hljs-keyword">select</span> <span class="hljs-built_in">size</span>=<span class="hljs-string">'2'</span>&gt;&lt;/<span class="hljs-keyword">select</span>&gt;<br><span class="hljs-built_in">size</span> 规定下拉列表中可见选项的数目<br>&lt;opation selected=<span class="hljs-string">'selected'</span>&gt;&lt;/opation&gt;<br>selected 规定在<span class="hljs-keyword">select</span>里面默认展示低级行<br></code></pre>
+
+<blockquote>
+  <p><code>11. textarea 文本域</code> <br>
+  <code>1) rows属性定义 高度</code> <br>
+  <code>2) cols属性定义 宽度</code> <br>
+  <code>3) resize 调整尺寸样式属性 none/vertical/horizontal</code> <br>
+  <code>12. fieldset 可将表单内的相关元素分组</code> <br>
+  <code>13. legend 为fieldset元素定义标题</code></p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs javascript">&lt;fieldset&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>定义域标题<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span></span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">'text'</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span></span><br></code></pre>
+
+<blockquote>
+  <p><code>14.focus伪类 (适用a,input,button)</code> <br>
+  <code>1)outline 外轮廓线</code></p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs css"><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span>{<span class="hljs-attribute">background</span>:red;}<br></code></pre>
+
+<blockquote>
+  <p><code>15. placeholder 属性提示信息</code></p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs delphi">&lt;input <span class="hljs-keyword">type</span>=<span class="hljs-string">'text'</span> <span class="hljs-keyword">name</span>=<span class="hljs-string">''</span> id=<span class="hljs-string">''</span> placeholder=<span class="hljs-string">'请输入密码'</span>/&gt;<br></code></pre>
+
+
+
+<h3 id="四总结">四.总结</h3></div></body></html>

@@ -1,0 +1,34 @@
+﻿1.表格table
+	头部<thead></thead> 
+	表格主体部分:<tbody</tbody>
+	表格尾部:<tfoot></tfoot>
+	表格一行:<tr></tr>
+表格样式:
+	<table width="" height:"" border=""></table>
+	注意:这里的border只能给宽度,颜色只能在style里写
+
+指定单元格水平和垂直之间的间距:border-spacing:x,y;
+	x代表水平距离,y代表竖直距离
+cellspacing: x(只能写在table标签里面,水平竖直距离都为x)
+塌陷单元格:border-collapse:collapse;会忽略单元格的间距.
+表格样式初始化:
+	table{border-collapse:collapse}
+	tr,td{padding:0}
+2.table默认样式:
+	1.单元格默认平分宽度
+	2.th内容,默认加粗,并且上下左右居中
+	3.td内容,上下居中,左对齐
+	4.table的宽度决定表格的宽度
+	5.table里面的单元格宽度会转换成百分比
+	6.表格同一列/行会继承最大值
+	7.th,td没有margin.单元格里面可以包括(文本,图片,列表,表单,表格)
+	8.td里面的文字支持文本对齐方式:text-align;
+3.table表格合并:
+	横向合并:<td colspan="2"></td>
+	纵向合并:<td rowspan="2"></td>
+3.display:table:
+	将元素以单元格的形式展示(自适应布局)
+	特征:
+	1):支持margin:auto;
+	2)默认内容撑开宽度
+	3)支持宽高

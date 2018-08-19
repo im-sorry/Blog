@@ -1,0 +1,198 @@
+<!DOCTYPE html><html><head><title>第四章</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="第四章">第四章</h1>
+
+
+
+<h2 id="选择器命名规则背景样式">选择器+命名规则+背景样式</h2>
+
+<hr>
+
+
+
+<h3 id="一选择器初级">一.选择器初级</h3>
+
+<blockquote>
+  <p>种类</p>
+  
+  <ul><li><strong>通配符选择器</strong> :  *</li>
+  <li><strong>元素选择器</strong> :  元素标签</li>
+  <li><strong>class选择器</strong> :  相当于身份证上面的名字</li>
+  <li><strong>id选择器</strong> :  相当于身份证号码</li>
+  <li><strong>后代选择器</strong> :  div  ul  li</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line">*{<span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span>;<span class="hljs-attribute">padding</span>:<span class="hljs-number">0</span>}
+</div><div class="hljs-line"><span class="hljs-selector-tag">div</span>,<span class="hljs-selector-tag">li</span>{<span class="hljs-attribute">width</span>:<span class="hljs-number">100px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">100px</span>;<span class="hljs-attribute">border</span>:<span class="hljs-number">1px</span> solid red;}
+</div><div class="hljs-line"><span class="hljs-selector-class">.box</span>{<span class="hljs-attribute">width</span>:<span class="hljs-number">100px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">100px</span>;<span class="hljs-attribute">background</span>:red;}
+</div><div class="hljs-line"><span class="hljs-selector-id">#box</span>{<span class="hljs-attribute">width</span>:<span class="hljs-number">100px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">100px</span>;<span class="hljs-attribute">background</span>:green;}
+</div><div class="hljs-line"><span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span>,<span class="hljs-selector-id">#box</span> <span class="hljs-selector-class">.box</span> <span class="hljs-selector-class">.box1</span>{<span class="hljs-attribute">width</span>:<span class="hljs-number">100px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">100px</span>;<span class="hljs-attribute">background</span>:pink;}
+</div></code></pre>
+
+<hr>
+
+
+
+<h3 id="二html命名规范">二.HTML命名规范</h3>
+
+<blockquote>
+  <p>禁止的命名方法</p>
+  
+  <ul><li><strong>小写字母开头</strong></li>
+  <li><strong>不能以数字命名</strong></li>
+  <li><strong>不能出现中文</strong></li>
+  <li><strong>不能使用拼音</strong></li>
+  </ul>
+  
+  <p>企业命名规则</p>
+  
+  <ul><li><strong>以字母开头</strong> :  不允许单个字母的类选择器</li>
+  <li><strong>全小写,并使用 “-” 连字符</strong> :  少使用 “_” 连字符和驼峰命名</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs applescript"><div class="hljs-line">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>='nav-left'&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+</div></code></pre>
+
+<hr>
+
+
+
+<h3 id="三css背景样式">三.CSS背景样式</h3>
+
+<blockquote>
+  <p>背景颜色</p>
+  
+  <ul><li><strong>background-color</strong> :   十六进制,英文单词,rgba</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs maxima"><div class="hljs-line"><span class="hljs-built_in">background</span>-<span class="hljs-built_in">color</span>:;
+</div><div class="hljs-line">
+</div></code></pre>
+
+<blockquote>
+  <p>背景图片</p>
+  
+  <ul><li><strong>background-image:url();</strong> <br>
+  url(” “) : 路径 <br>
+  none  不使用背景图片</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs less"><div class="hljs-line"><span class="hljs-attribute">background-image</span>:url(<span class="hljs-string"></span>);
+</div></code></pre>
+
+<blockquote>
+  <p>背景图片的重复 </p>
+  
+  <ul><li><strong>background-repeat</strong> <br>
+  no-repeat  不重复 <br>
+  repeat-x    水平方向重复 <br>
+  repeat-y    垂直方向重复 <br>
+  repeat       默认值</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs gams"><div class="hljs-line">background-<span class="hljs-keyword">repeat</span>:<span class="hljs-keyword">no</span>-<span class="hljs-keyword">repeat</span>;
+</div><div class="hljs-line">background-<span class="hljs-keyword">repeat</span>:<span class="hljs-keyword">repeat</span>-x;
+</div><div class="hljs-line">background-<span class="hljs-keyword">repeat</span>:<span class="hljs-keyword">repeat</span>-y;
+</div><div class="hljs-line">background-<span class="hljs-keyword">repeat</span>:<span class="hljs-keyword">repeat</span>;[默认]
+</div></code></pre>
+
+<blockquote>
+  <p>背景图片的位置</p>
+  
+  <ul><li><strong>background-position</strong> <br>
+  1.关键词  top / bottom / left / right / center <br>
+  2.只写一个的话 , 另一个默认 center <br>
+  3.百分数值 <br>
+  4.具体数值</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs scss"><div class="hljs-line"><span class="hljs-attribute">background-position</span>:left <span class="hljs-attribute">top</span>;
+</div><div class="hljs-line"><span class="hljs-attribute">background-position</span>:left; <span class="hljs-selector-attr">[第二个值默认居中]</span>
+</div><div class="hljs-line"><span class="hljs-attribute">background-position</span>:<span class="hljs-number">20%</span> <span class="hljs-number">30%</span>; <span class="hljs-selector-attr">[水平 竖直]</span>
+</div><div class="hljs-line"><span class="hljs-attribute">background-position</span>:<span class="hljs-number">20px</span> <span class="hljs-number">30px</span>;<span class="hljs-selector-attr">[水平 竖直]</span>
+</div></code></pre>
+
+<blockquote>
+  <p>背景图片大小</p>
+  
+  <ul><li><strong>background-size</strong> <br>
+  1.cover <br>
+  <code>图片从左上角为起点开始缩放 , 直到图片占满整个背景</code> <br>
+  2.contain  <br>
+  <code>图片从左上角开始缩放 , 当图片的右或者下边与背景框有一个边接触,图片就停止缩放</code> <br>
+  3.length <br>
+  <code>给图片背景设置宽高 , 图片就会被压缩.如果设置一个参数,另外一个默认就是auto,它将按照图片原比例缩放</code> <br>
+  4.百分数 <br>
+  <code>按照装这个背景图片的元素的宽高来计算</code></li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs arduino"><div class="hljs-line"><span class="hljs-built_in">background</span>-<span class="hljs-built_in">size</span>:cover;
+</div><div class="hljs-line"><span class="hljs-built_in">background</span>-<span class="hljs-built_in">size</span>:contain;
+</div><div class="hljs-line"><span class="hljs-built_in">background</span>-<span class="hljs-built_in">size</span>:<span class="hljs-number">0</span>px <span class="hljs-number">0</span>px;
+</div><div class="hljs-line"><span class="hljs-built_in">background</span>-<span class="hljs-built_in">size</span>:<span class="hljs-number">0</span>px;
+</div><div class="hljs-line"><span class="hljs-built_in">background</span>-<span class="hljs-built_in">size</span>:<span class="hljs-number">0</span>% <span class="hljs-number">0</span>%;
+</div></code></pre>
+
+<blockquote>
+  <p>背景关联</p>
+  
+  <ul><li><strong>background-attachment</strong> <br>
+  1.scroll  <br>
+  <code>默认值.图片背景会随着页面其余部分滚动而移动</code> <br>
+  2.fixed <br>
+  <code>当页面的其余部分滚动时,背景图像不会移动</code> <br>
+  3.inherit  <br>
+  <code>规定应该从父元素继承background-attachment属性的设置</code></li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs scss"><div class="hljs-line"><span class="hljs-attribute">background-attachment</span>:scroll;
+</div><div class="hljs-line"><span class="hljs-attribute">background-attachment</span>:fixed;
+</div><div class="hljs-line"><span class="hljs-attribute">background-attachment</span>:inherit;
+</div></code></pre>
+
+<blockquote>
+  <p>背景样式复合写法</p>
+  
+  <ul><li><strong>background:</strong>color url() no-repeat position/size;</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs coq"><div class="hljs-line">background:<span class="hljs-built_in">red</span> url() no-<span class="hljs-built_in">repeat</span> <span class="hljs-built_in">top</span> <span class="hljs-built_in">left</span>/cover;
+</div></code></pre>
+
+
+
+<h3 id="四总结">四.总结</h3></div></body></html>

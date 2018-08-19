@@ -1,0 +1,130 @@
+<!DOCTYPE html><html><head><title>第六章</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="第六章">第六章</h1>
+
+
+
+<h2 id="选择器高级伪类">选择器高级+伪类</h2>
+
+<hr>
+
+
+
+<h3 id="一选择器">一.选择器</h3>
+
+<blockquote>
+  <ul><li><strong>基本选择器</strong> <br>
+  <ol>
+  <li rel="1">通配符选择器<code>*</code></li>
+  <li rel="2">元素选择器[tagName] <br>
+  <code>匹配所有该标签的所有元素</code></li>
+  <li rel="3">class选择器[.className] <br>
+  <code>匹配所有class属性中包含classname的元素</code></li>
+  <li rel="4">id选择器[#idName] <br>
+  <code>匹配所有id等于idname的元素</code></li></ol></li>
+  <li><p><strong>多元素组合选择器</strong></p>
+  
+  <ol>
+  <li rel="1"><p>E,F 多元素选择器 <br>
+  <code>同时匹配所有E元素或者F元素,E和F用逗号隔开</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">div</span>,<span class="hljs-selector-tag">ul</span>{<span class="hljs-attribute">width</span>:<span class="hljs-number">50px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">50px</span>;<span class="hljs-attribute">background</span>:red;}
+</div></code></pre></li>
+  <li rel="2"><p>E F 后代选择器 <br>
+  <code>匹配所有属于E元素后代的F元素,E和F之间用空格,包含子元素和孙元素</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">ul</span>{<span class="hljs-attribute">width</span>:<span class="hljs-number">50px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">50px</span>;<span class="hljs-attribute">background</span>:red;}
+</div></code></pre></li>
+  <li rel="3"><p>E &gt; F 子元素选择器  <br>
+  <code>匹配所有E元素的子元素F</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">div</span> &gt; <span class="hljs-selector-tag">ul</span>{<span class="hljs-attribute">width</span>:<span class="hljs-number">50px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">50px</span>;<span class="hljs-attribute">background</span>:red;}
+</div></code></pre></li>
+  <li rel="4"><p>E + F 毗陵元素选择器 <br>
+  <code>匹配所有紧随E元素的同级元素F</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">div</span> + <span class="hljs-selector-tag">p</span>{<span class="hljs-attribute">width</span>:<span class="hljs-number">50px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">50px</span>;<span class="hljs-attribute">background</span>:red;}
+</div></code></pre></li></ol></li>
+  <li><p><strong>属性选择器</strong></p>
+  
+  <ol>
+  <li rel="1"><p>[att] <code>匹配所有具有att属性的E元素</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-attr">[box]</span>{<span class="hljs-attribute">background</span>:red;}
+</div></code></pre></li>
+  <li rel="2"><p>[att=val]<code>匹配所有att属性等于val的E元素</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-attr">[class=box]</span>{<span class="hljs-attribute">background</span>:red;}
+</div></code></pre></li>
+  <li rel="3"><p>[att~=val]<code>匹配所有att属性包含val或者等于val的E元素</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-attr">[class~=box]</span>{<span class="hljs-attribute">background</span>:red;}
+</div></code></pre></li>
+  <li rel="4"><p>[att |= val]<code>匹配所有att属性为val或val-开头的E元素</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-attr">[class|=box]</span>{<span class="hljs-attribute">background</span>:red;}
+</div></code></pre></li>
+  <li rel="5"><p>[att1][att2=val]<code>匹配所有拥有att1属性同时具有att2等于val的元素</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs markdown"><div class="hljs-line">[<span class="hljs-string">id</span>][<span class="hljs-symbol">class=box</span>]{background:red;}
+</div></code></pre></li></ol></li>
+  </ul>
+</blockquote>
+
+<h3 id="二伪类">二.伪类</h3>
+
+<blockquote>
+  <ul><li><p><strong>伪类选择器</strong></p>
+  
+  <ol>
+  <li rel="1"><p>:link <code>规定所有未被点击的链接</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:link</span>{<span class="hljs-attribute">color</span>:green;}
+</div></code></pre></li>
+  <li rel="2"><p>:visited <code>匹配所有已被点击的链接</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:visited</span>{<span class="hljs-attribute">color</span>:green;}
+</div></code></pre></li>
+  <li rel="3"><p>:active <code>匹配鼠标已经按下但是没有放开的元素</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:active</span>{<span class="hljs-attribute">color</span>:green;}
+</div></code></pre></li>
+  <li rel="4"><p>:hover <code>匹配鼠标悬停在在上面的元素</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span>{<span class="hljs-attribute">color</span>:green;}
+</div></code></pre></li></ol></li>
+  <li><p><strong>伪元素选择器</strong> <br>
+  伪元素:在文档中添加的额外元素,而又不扰乱文档本身.这些元素实际不在文档中生成,源码中找不到他们,但是浏览器会产生样式.</p>
+  
+  <ol>
+  <li rel="1"><p>:before<code>在元素内容前面插入内容</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">h1</span><span class="hljs-selector-pseudo">:before</span>{<span class="hljs-attribute">content</span>:<span class="hljs-string">''</span>;<span class="hljs-attribute">display</span>:block;<span class="hljs-attribute">width</span>:<span class="hljs-number">50px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">50px</span>;<span class="hljs-attribute">background</span>:red;}
+</div></code></pre></li>
+  <li rel="2"><p>:after<code>在元素后面插入内容</code></p></li></ol></li>
+  <li><p><strong>a伪类</strong></p>
+  
+  <ol>
+  <li rel="1"><p>a:hover</p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span>{<span class="hljs-attribute">text-decoration</span>:underline;}
+</div></code></pre></li>
+  <li rel="2"><p>扩展 <br>
+  <code>1) div:hover{} <br>
+  2) div:hover a{} <br>
+  3) div:hover + a{}</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-class">.box</span><span class="hljs-selector-pseudo">:hover</span>{<span class="hljs-attribute">background</span>:red;}
+</div><div class="hljs-line"><span class="hljs-selector-class">.box</span><span class="hljs-selector-pseudo">:hover</span> <span class="hljs-selector-tag">a</span>{<span class="hljs-attribute">text-decoration</span>:underline;}
+</div></code></pre></li></ol></li>
+  </ul>
+</blockquote>
+
+<h3 id="三总结">三.总结</h3></div></body></html>

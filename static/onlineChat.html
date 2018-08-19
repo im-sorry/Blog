@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <script src="https://cdn.bootcss.com/socket.io/2.1.1/socket.io.dev.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io-stream/0.9.1/socket.io-stream.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+  <!--<link rel="stylesheet" href="css/reset.css">-->
+  <!--<link rel="stylesheet" href="css/main.css">-->
+  <link rel="stylesheet" href="css/index.css">
+  <link id="skincss" rel="stylesheet" href="">
+</head>
+<body>
+	<div class="leftInfo">
+		<p class="onlineNum">在线人数:<span class="numOfOnline"></span></p>
+		<div class="onlineMsg">
+			<span class="arrowTop"><i>></i></span>
+			<ul id="onlineSlide">
+			</ul>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="content">
+		</div>
+		<div class="menu p-r">
+			<i class="unmsg-hint f-l"></i>
+			<i class="f-r clearMsg"></i>
+			<i class="f-r skin"></i>
+			<label class="f-r imgProfile" for="imgProfile"></label>
+      <i class="f-r map"></i>
+		</div>
+		<div class="writeArea w100 clearfix">
+			<textarea name="sendMsg" id="sendMsg" cols="30" rows="10" autofocus maxlength="100" draggable="false"></textarea>
+			<input type="button" value="发送(enter)">
+		</div>
+	</div>
+	<div class="rightInfo">
+		<p class="w100">昵称:<input id="name" class="h100" value="" disabled/><button id="changeName">修改</button></p>
+	</div>
+  <div class="hideMap p-a">
+    <div class="stick">
+    </div>
+    <div class="box w100 p-r">
+      <i class="clearMap fa fa-times-circle-o"></i>
+      <div id="mapContainer" class="w100"></div>
+      <button onclick="sendMap()">发送位置</button>
+    </div>
+  </div>
+	<input type="file" accept="image/*" hidden id="imgProfile">
+<!-- http://data.huiyi8.com/2014/lxy/05/14/15.mp3 消息提示音 -->
+<!-- http://data.huiyi8.com/2014/lxy/05/14/16.mp3 消息提示音 -->
+<!-- http://data.huiyi8.com/2014/lxy/05/14/2.mp3 消息提示音 -->
+<!-- http://data.huiyi8.com/2014/lxy/05/14/6.mp3 消息提示音 -->
+<!-- http://data.huiyi8.com/2014/lxy/05/14/8.mp3 消息提示音 -->
+  <!--<script src="js/skyGrain.js" defer></script>-->
+  <!--<script src="js/map.js"></script>-->
+  <!--<script src="js/onlineChat.js"></script>-->
+  <!--<script src="js/sendImg.js"></script>-->
+  <!--<script src="js/sendMap.js"></script>-->
+  <script src="js/main.js"></script>
+</body>
+</html>

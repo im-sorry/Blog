@@ -1,0 +1,67 @@
+﻿1.字体颜色：color=red;
+2.字体类型：font-family：
+	字体类型可以使中文，但是必须加引号，英文状态下，有特殊符号时也需要引号，写多个字体类型 时，用逗号隔开
+3.字体大小：font-size
+	1）px
+	2）em 基于html来算的比例，默认1em=16px
+	3）百分数 基于html来算的比例，默认1em=16px
+	4）rem 基于html来算的比例，默认1em=16px（用于移动端开发）
+4.字体加粗 font-weight：
+	1）normal默认，正常
+	2）bold 加粗
+	3）bolder 更粗，（其实并没有明显比bold粗，没用）
+	4）lighter 更细，只针对带有加粗样式的标签（h系列，strong） 
+	5）数字加粗，100,200,300,400,500,600（相当于bold）,700,800,900
+		100-500，字体无变化，600-900字体无变化
+	6）继承父级字体的粗细：inherit
+5.字体样式：font-style：
+	1）结构斜体:italic
+		字体的结构发生变化的倾斜
+	2）直接斜体：oblique
+		字体直接的倾斜
+6.小写字母大写
+	font-variant:small-caps
+7.行高：line-height：
+8.字体复合样式写法：
+	font：weight variant font-style font-size
+
+
+
+文本样式：（写文章时用到）
+1.文本的大小写：text-transform：
+	1）uppercase 字母大写；
+	2）capitalize 首字母大写
+	3）lowercase 字母小写
+2.文本对齐方式： text-align：
+	1）left左对齐
+	2）center居中对齐
+	3）right 右对齐
+	4）justify 两端对齐（字体间距拉的一样大）
+3.文本缩进：text-indent：
+	1）px
+	2）em
+4.文本修饰：text-decoration：
+	1）none；去除修饰
+	2）underline；加下划线
+	3）line-through：中划线
+	4）overline：上划线
+5.word-space：词间距（以空格处分隔为一个词语，两个词语间必须有空格才能有间距）
+6.letter-spacing：字间距
+
+
+7.文本不换行：white-space：nowrap；（文本太多会超出边框）
+8.超出隐藏：overflow：hidden（bfc机制）
+9.text-overflow：ellipsis
+（达到省略号的效果，这三者，缺一不可。）
+
+
+
+
+
+特殊字符：
+&nbsp；
+&gt；>
+&lt；>
+&quot；<
+&copy；版权
+&yen；￥

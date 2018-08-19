@@ -1,0 +1,53 @@
+﻿1.通配符选择器 *
+2.元素先择器，就是标签选择器（tagname）
+3.class（类名）选择器，（取多个类名时，名字之间用空格隔开）
+	可以重复出现，不具有唯一性
+4.ID选择器
+	具有唯一性
+5.后代选择器
+	父级 子级（父级）子级
+	用空格隔开
+选择器的作用：就是精确选择我们要给样式的元素
+
+
+6.禁止命名：
+	1）汉字（有效果，不允许使用）
+	2）拼音
+	3）纯数字
+	4)特殊符号
+	5）a，b，c单字符
+企业命名：
+	1）英文开头
+	2）可以包含数字
+	3）-号连接
+	为什么不能使用驼峰命名？
+
+
+7:css背景样式（background）：
+	1.背景颜色：
+		background-color：
+		1）英文单词
+		2）背景颜色
+		3）rgba（0,0,0,0）red，green，blue，opacity（透明度，0代表完全透明，1代表完全不透明）
+	2.背景：
+		background-image：url（"图片的路径"）；
+		background-repeat：no-repeat/repeat/repeat-x/repeat-y；（图片太小会导致平铺满元素，选择no-repeat不会平铺repeat-x：水平方向平铺；repeat-y：垂直方向平铺；
+		background-position:top/left/right/bottom/center(给一个值时，另一个会默认居中)（给两个值时，第一个值是沿着X轴距离，第二个值是沿着y轴的距离）（百分数时，图片百分数（沿x，y）的位置与背景框的百分数的位置重合）
+		background-size：cover/contain/数值/百分数，cover(背景图片从左上角为起点开始缩放宽高等比例缩放或扩大，当填充满整个背景框就停止 图片宽高比不等于边框宽高比，图片就会有部分超出，超出部分不能显示)contain（从左上角为起点开始缩放，只要有一边触碰边框就停止）数值（px）（第一个值代表沿x轴缩放的像素宽度，第二个值代表沿y轴缩放的像素高度）（只写一个数，第二个默认等比缩放）百分数（第一个数代表背景框的百分比宽度，第二个值代表背景框的百分比高度）
+		background-attachment：scroll/fixed/inherit。scroll（图片会随着背景框的移动而移动，玩为默认值）；fixed（当页面滚动时，背景图片不会移动）inherit（继承父级的background-attachment样式）
+	3.复合写法：
+	background：color url() repeat position/size attachment（样式没有超过3个要单独写，背景颜色会被背景图片挡住）
+
+
+
+
+
+
+
+
+
+
+
+
+
+

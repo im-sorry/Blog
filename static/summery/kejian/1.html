@@ -1,0 +1,147 @@
+<!DOCTYPE html><html><head><title>第一章</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="第一章">第一章</h1>
+
+
+
+<h2 id="初识htmlhtml常用标签">初识HTML+HTML常用标签</h2>
+
+<hr>
+
+
+
+<h3 id="一什么是语言">一.什么是语言</h3>
+
+
+
+<h3 id="二web前端开发语言">二.web前端开发语言</h3>
+
+
+
+<h3 id="三html超文本标记语言">三.HTML超文本标记语言</h3>
+
+<blockquote>
+  <p>超文本标记语言,标准通用标记与眼下的一个应用.”超文本”就是指页面内容可以包含<code>图片,链接,音乐,程序</code>等非文字元素.结构包括<code>头部head,主题body.</code>头部提供关于网页信息,主体部分提供网页具体内容.</p>
+</blockquote>
+
+
+
+<h3 id="四网页主体结构">四.网页主体结构</h3>
+
+<blockquote>
+  <ul><li><strong>1. 标记</strong> <br>
+  &lt;&gt;</li>
+  <li><strong>2. 最外层标记<code>&lt;html&gt;&lt;/html&gt;</code></strong> <br>
+  <code>也称之为跟标签</code></li>
+  <li><strong>3. 文档头<code>&lt;head&gt;&lt;/head&gt;</code></strong> <br>
+  <code>不会显示在浏览器中,基本的描述</code></li>
+  <li><strong>4. 网页主体<code>&lt;body&gt;&lt;/body&gt;</code></strong> <br>
+  <code>正文:文字,图片,链接,表单等</code></li>
+  <li><strong>单标签</strong> <br>
+  <code>&lt;img /&gt;</code> <br>
+  <code>&lt;input type='text'&gt;</code></li>
+  <li><strong>双标签</strong> <br>
+  <code>开始标签+闭合标签</code></li>
+  </ul>
+</blockquote>
+
+<h3 id="五常用标签">五.常用标签</h3>
+
+<blockquote>
+  <ul><li><strong>1. 块</strong> <br>
+  <code>div</code></li>
+  <li><p><strong>2. 标题标签</strong> <br>
+  <code>&lt;h1&gt;&lt;/h1&gt;</code> <br>
+  <code>&lt;h2&gt;&lt;/h2&gt;</code> <br>
+  <code>&lt;h3&gt;&lt;/h3&gt;</code> <br>
+  <code>&lt;h4&gt;&lt;/h4&gt;</code> <br>
+  <code>&lt;h5&gt;&lt;/h5&gt;</code> <br>
+  <code>&lt;h6&gt;&lt;/h6&gt;</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>朝歌老师很帅<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>朝歌老师很帅<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>朝歌老师很帅<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>朝歌老师很帅<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>朝歌老师很帅<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>朝歌老师很帅<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</div></code></pre></li>
+  <li><p><strong>3. 段落标签</strong> <br>
+  <code>&lt;p&gt;&lt;/p&gt;</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这是一段文字<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</div></code></pre></li>
+  <li><p><strong>4. 常见标签</strong> <br>
+  <code>&lt;span&gt;&lt;/span&gt;</code>区分样式  </p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>同学们都<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>很棒<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>哦<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</div></code></pre>
+  
+  <p><code>&lt;strong&gt;&lt;/strong&gt;</code>强调  <br>
+  <code>&lt;b&gt;&lt;/b&gt;</code>定义加粗 <br>
+  <code>&lt;em&gt;&lt;/em&gt;</code>强调  <br>
+  <code>&lt;i&gt;&lt;/i&gt;</code>定义倾斜字体  <br>
+  <code>&lt;del&gt;&lt;/del&gt;</code>删除文本  <br>
+  <code>&lt;sub&gt;&lt;/sub&gt;</code>下标  <br>
+  <code>&lt;sup&gt;&lt;/sup&gt;</code>上标  <br>
+  <code>&lt;br/&gt;</code>换行  <br>
+  <code>&lt;hr&gt;</code>定义水平线  <br>
+  <code>&lt;img /&gt;</code>图片标签  <br>
+  <code>&lt;a&gt;&lt;/a&gt;</code>超链接标签</p></li>
+  </ul>
+</blockquote>
+
+<h3 id="六超链接">六.超链接</h3>
+
+<blockquote>
+  <ol><li rel="1">超链接可以是一个字,一个词,或者一组词,也可以是一幅图,也可以是一些内容,或某部分</li>
+  <li rel="2">鼠标放在超链接部分时,会变一只小手</li>
+  <li rel="3"><p>通过a标签使用 <br>
+  <code>1. 通过href属性 - 创建指向另一个文档的链接</code> <br>
+  <code>2. target属性定义网页打开方式 <br>
+  _blank默认新窗口 <br>
+  _self规定当前窗口</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.tmall.com/"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_self"</span>&gt;</span>天猫<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</div></code></pre></li>
+  <li rel="4"><p>锚点 <br>
+  <code>1. 通过name名字,可以通过id属性来代替name</code></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">'http://www.w3school.com.cn/'</span>&gt;</span>走你<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">'http://www.w3school.com.cn/'</span> <span class="hljs-attr">target</span>=<span class="hljs-string">'_blank'</span>&gt;</span>走你<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</div></code></pre></li>
+  <li rel="5"><p>创建邮件</p>
+  
+  <pre class="prettyprint hljs-dark"><code class="hljs llvm"><div class="hljs-line">&lt;a href='mailto:someone<span class="hljs-title">@microsoft.com</span>?subject=Hello<span class="hljs-symbol">%20</span>again'&gt;发送邮件&lt;/a&gt;
+</div><div class="hljs-line">&lt;a href='mailto:someone<span class="hljs-title">@microsoft.com</span>?<span class="hljs-keyword">cc</span>=someoneelse<span class="hljs-title">@microsoft.com</span>&amp;bcc=andsomeoneelse<span class="hljs-number">2</span><span class="hljs-title">@microsoft.com</span>&amp;subject=Summer<span class="hljs-symbol">%20</span>Party&amp;body=You<span class="hljs-symbol">%20</span>are<span class="hljs-symbol">%20</span>invited<span class="hljs-symbol">%20</span><span class="hljs-keyword">to</span><span class="hljs-symbol">%20</span>a<span class="hljs-symbol">%20</span>big<span class="hljs-symbol">%20</span>summer<span class="hljs-symbol">%20</span>party!'&gt;发送邮件&lt;/a&gt;
+</div></code></pre></li>
+  <li rel="6"><p>下载 <br>
+  <code>当我们链接的是一个软件的时候</code></p></li>
+  </ol>
+</blockquote>
+
+<h3 id="七img图片标签">七.img图片标签</h3>
+
+<blockquote>
+  <ol><li rel="1"><code>&lt;img src='url' alt='' title=''/&gt;</code></li>
+  <li rel="2">url指图像位置</li>
+  <li rel="3">alt属性,当浏览器无法加载图片时的替换文本</li>
+  <li rel="4">title图像的名称</li>
+  </ol>
+</blockquote>
+
+
+
+<h3 id="八总结">八.总结</h3>
+
+
+
+<h3 id="九作业">九.作业</h3></div></body></html>

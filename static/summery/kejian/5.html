@@ -1,0 +1,150 @@
+<!DOCTYPE html><html><head><title>第五章</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="第五章">第五章</h1>
+
+
+
+<h2 id="字体样式文本样式特殊字符">字体样式+文本样式+特殊字符</h2>
+
+<hr>
+
+
+
+<h3 id="一字体样式">一.字体样式</h3>
+
+<blockquote>
+  <ul><li><strong>字体颜色</strong> <br>
+  color</li>
+  <li><strong>字体类型</strong> <br>
+  font-family</li>
+  <li><strong>字体大小</strong> <br>
+  font-size : <br>
+  <code>1.%相当于父容积的字体%调整 <br>
+  2.em等于父级的字体尺寸(相对于父级字体大小而言) <br>
+  3.rem相对于html(跟标签)的字体大小,用于移动端开发</code></li>
+  <li><strong>字体粗细</strong> <br>
+  font-weight : <br>
+  <code>1.bold 粗字体 <br>
+  2.bolder 更粗字体 <br>
+  3.lighter 更细字体 <br>
+  4.normal 默认 <br>
+  5.100 200 300 400 500 600 700 800 900</code></li>
+  <li><strong>字体样式</strong> <br>
+  font-style <br>
+  <code>1.italic 字体倾斜 <br>
+  2.oblique 字体的斜体 <br>
+  3.normal 默认 <br>
+  </code></li>
+  <li><strong>小型大写字母</strong> <br>
+  font-variant <br>
+  <code>1.small-caps 小型的大写字母 <br>
+  2.normal 默认 <br>
+  </code></li>
+  <li><strong>行高</strong> <br>
+  ling-height <br>
+  <code>设置行与行之间的距离</code></li>
+  <li><strong>字体复合样式写法</strong> <br>
+  font :  font-style font-variant font-weight font-size/line-height font-family</li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="hljs scss"><div class="hljs-line"><span class="hljs-attribute">color</span>:red;
+</div><div class="hljs-line"><span class="hljs-attribute">font-family</span>:<span class="hljs-string">'微软雅黑'</span>, <span class="hljs-string">'宋体'</span>;
+</div><div class="hljs-line"><span class="hljs-attribute">font-size</span>:<span class="hljs-number">12px</span>/<span class="hljs-number">12%</span>/em/rem;<span class="hljs-selector-attr">[四种写法]</span>
+</div><div class="hljs-line"><span class="hljs-attribute">font-weight</span>:bold/bolder/lighter/normal;
+</div><div class="hljs-line"><span class="hljs-attribute">font-style</span>:italic/oblique/normal;
+</div><div class="hljs-line"><span class="hljs-attribute">font-variant</span>:small-caps/normal;
+</div><div class="hljs-line"><span class="hljs-attribute">line-height</span>:<span class="hljs-number">0px</span>;
+</div></code></pre>
+
+<hr>
+
+
+
+<h3 id="二文本样式">二.文本样式</h3>
+
+<blockquote>
+  <ul><li><strong>控制文本大小写</strong> <br>
+  text-transform <br>
+  <code>1.uppercase 字母大写 <br>
+  2.capitalize 首字母大写 <br>
+  3.lowercase 字母小写</code></li>
+  <li><strong>文本对齐方式</strong> <br>
+  text-align <br>
+  <code>1.left 左对齐 <br>
+  2.center 居中对齐 <br>
+  3.right 右对齐 <br>
+  4.justify 两端对齐</code> </li>
+  <li><strong>首行缩进</strong> <br>
+  text-indent</li>
+  <li><strong>文本修饰</strong> <br>
+  text-decoration <br>
+  <code>1.none 去掉下划线 <br>
+  2.underline 下划线 <br>
+  3.line-through 中划线 <br>
+  4.overline 上划线</code> </li>
+  <li><strong>字(字母间距)间距</strong> <br>
+  letter-spacing</li>
+  <li><strong>词(词语)间距</strong> <br>
+  word-spacing</li>
+  <li><strong>强制文本不换行</strong> <br>
+  white-spacing <br>
+  <code>1.遇到&lt;br /&gt;换行 <br>
+  2.默认 normal</code></li>
+  <li><strong>强制文本换行</strong> <br>
+  word-break</li>
+  <li><strong>益处隐藏/超出隐藏</strong> <br>
+  overflow</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs groovy"><div class="hljs-line">text-<span class="hljs-string">transform:</span>uppercase<span class="hljs-regexp">/capitalize/</span>lowercase;
+</div><div class="hljs-line">text-<span class="hljs-string">align:</span>left<span class="hljs-regexp">/center/</span>right/justify;
+</div><div class="hljs-line">text-<span class="hljs-string">indent:</span><span class="hljs-number">0</span>px/<span class="hljs-number">0</span>em;
+</div><div class="hljs-line">text-<span class="hljs-string">decoration:</span>none<span class="hljs-regexp">/underline/</span>line-through/overline;
+</div><div class="hljs-line">letter-<span class="hljs-string">spacing:</span><span class="hljs-number">0</span>px;
+</div><div class="hljs-line">sord-<span class="hljs-string">spacing:</span><span class="hljs-number">0</span>px;
+</div><div class="hljs-line">white-<span class="hljs-string">space:</span>nowrap;
+</div><div class="hljs-line">word-<span class="hljs-string">break:</span><span class="hljs-keyword">break</span>-all;
+</div><div class="hljs-line"><span class="hljs-string">overflow:</span>hidden;
+</div></code></pre>
+
+<blockquote>
+  <ul><li><strong>超出文本变省略号</strong> <br>
+  三者缺一不可 [css3]</li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs scss"><div class="hljs-line"><span class="hljs-attribute">white-space</span>:nowrap;
+</div><div class="hljs-line"><span class="hljs-attribute">overflow</span>:hidden;
+</div><div class="hljs-line"><span class="hljs-attribute">text-overflow</span>:ellipsis;
+</div></code></pre>
+
+<hr>
+
+
+
+<h3 id="三特殊字符">三.特殊字符</h3>
+
+<p>空格 &nbsp; <br>
+大于 &gt; <br>
+小于 &lt; <br>
+引号 " <br>
+版权号 ©</p>
+
+<hr>
+
+
+
+<h3 id="四总结">四.总结</h3></div></body></html>

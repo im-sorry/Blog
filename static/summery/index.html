@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="EditPlus®">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="css/iconfont.css"/>
+	<script src="js/colorfulBall.js" defer></script>
+	<style>
+		body{
+			background-color:transparent;
+		}
+		canvas{
+			position:absolute;
+			left:0;
+			top:0;
+      z-inedx:-11;
+		}
+	</style>
+	<title>index</title>
+	<style>
+		body,ul,a{margin:0;padding:0;}
+		a{text-decoration:none;color:inherit}
+		html,body,.wrap{
+			width:100%;
+			height:100%;
+		}
+		body{
+			min-width:1040px;
+			overflow:hidden;
+		}
+		ul{list-style:none;}
+		.p-a{
+			position:absolute;
+		}
+		.p-r{
+			position:relative;
+		}
+		.f-r{
+			float:right;
+		}
+		.f-l{
+			float:left;
+		}
+		.top50{
+			top:45%;
+		}
+		video{
+			width:100%;
+			height:100%;
+			top:0;
+			left:0;
+			object-fit:cover;
+			z-index:-2;
+		}
+    .l-side, .r-side{
+      z-index: 10;
+    }
+		.l-side{
+			left:-300px;
+			width:320px;
+			height:100%;
+			transition:.3s;
+			background-color:rgba(0,0,0,.5);
+		}
+		.l-click{
+			float:left;
+			width:20px;
+			height:100%;
+			background-color:rgba(0,0,0,.7);
+			cursor:pointer;
+		}
+		.r-click{
+			width:20px;
+			height:100%;
+			background-color:rgba(0,0,0,.7);
+			cursor:pointer;
+		}
+		.r-side{
+			right:-700px;
+			width:720px;
+			height:100%;
+			background-color:rgba(255,255,255,.6);
+			transition:.3s;
+			overflow:hidden;
+			color:white;
+		}
+		iframe{
+			display:block;
+			width:700px;
+			height:100%;
+		}
+		.l-click i{
+			animation:i-l-r 1s linear infinite;
+		}
+		.r-click i{
+			animation:i-r-l 1s linear infinite;
+		}
+		.title{
+			position:relative;
+			width:300px;
+			height:100%;
+			margin-top:-25px;
+			perspective:1000px;
+			perspective-origin:50% 50%;
+			overflow:hidden;
+		}
+		.chapter{
+			position:absolute;
+			top:0px;
+			left:100px;
+			width:100px;
+			height:25px;
+			animation:go 14s linear infinite;
+			transform-origin:0% 50% -550px;
+			transform-style:preserve-3d;
+		}
+		.list{
+			position:absolute;
+			top:0px;
+			right:0px;
+			width:100px;
+			height:25px;
+			color:black;
+			font-size:20px;
+			font-weight:bold;
+			overflow:hidden;
+			transition:.5s;
+			animation-delay:.5s;
+			backface-Visibility:hidden;
+			perspective:1000px;
+		}
+		.list li{
+			width:100px;
+			height:25px;
+			background-color:rgba(0,0,0,.5);
+			background-image:radial-gradient(rgba(0,0,0,0),rgba(0,0,0,0.9));
+		}
+		.list li.topical{
+			color:white;
+			text-align:center;
+			line-height:25px;
+			font-family:'Microsoft YaHei';
+			font-size:16px;
+			background-image:none;
+		}
+		.list li + li{
+			text-align:center;
+			margin-top:1px;
+			border-radius:5px;
+			color:#ff8040;
+			font-size:14px;
+			transform:rotateY(90deg);
+		}
+		.chapter:hover .list{
+			right:-100px;
+			animation:keep-height 1s linear infinite,go-changeheight .1s linear 1;
+		}
+		.chapter:hover .list li + li{
+			animation:keep-rotate 1s linear infinite,go-rotate 1s linear 1;
+		}
+		.chapter:hover .list li:nth-child(2){
+			animation-delay:.3s;
+		}
+		.chapter:hover .list li:nth-child(3){
+			animation-delay:.5s;
+		}
+		.chapter:hover .list li:nth-child(4){
+			animation-delay:.7s;
+		}
+		.title:hover .chapter{
+			animation-play-state:paused;
+		}
+		@keyframes go{
+			from{transform:rotateX(0deg)}
+			to{transform:rotateX(-360deg)}
+		}
+		@keyframes go-rotate{
+			from{transform:rotateY(90deg)}
+			to{transform:rotateY(0deg)}
+		}
+		@keyframes keep-rotate{
+			from{transform:rotateY(0deg)}
+			to{transform:rotateY(0deg)}
+		}
+		@keyframes go-changeheight{
+			from{height:25px}
+			to{height:100px}
+		}
+		@keyframes keep-height{
+			from{height:100px}
+			to{height:100px}
+		}
+		@keyframes i-l-r{
+			from{left:0px;}
+			to{left:3px;}
+		}
+		@keyframes i-r-l{
+			from{right:0px;}
+			to{right:3px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<audio src="video/bingbian.mp3" autoplay loop></audio>
+		<div class="r-side f-r p-a">
+			<div class="r-click p-r f-l" onclick="r_click(this)"><i class="fa fa-angle-double-left p-a top50" style="font-size:24px;color:white;"></i></div>
+			<iframe src="" frameborder="0" name="show" class="f-l"></iframe>
+		</div>
+		<div class="l-side f-l p-r">
+			<div class="title f-l">
+				<div class="chapter" style="animation-delay:0s;">
+					<ul class="list">
+						<li class="topical">第一章</li>
+						<li><a href="kejian/1.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/01-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/1/1.html" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+				<div class="chapter" style="animation-delay:1s;">
+					<ul class="list">
+						<li class="topical">第二章</li>
+						<li><a href="kejian/2.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/02-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/2/1.html" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+				<div class="chapter" style="animation-delay:2s;">
+					<ul class="list">
+						<li class="topical">第三章</li>
+						<li><a href="kejian/3.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/03-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/3/02.html" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+				<div class="chapter" style="animation-delay:3s;">
+					<ul class="list">
+						<li class="topical">第四章</li>
+						<li><a href="kejian/4.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/04-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/4/1.html" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+				<div class="chapter" style="animation-delay:4s;">
+					<ul class="list">
+						<li class="topical">第五章</li>
+						<li><a href="kejian/5.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/05-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/5/1.html" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+				<div class="chapter" style="animation-delay:5s;">
+					<ul class="list">
+						<li class="topical">第六章</li>
+						<li><a href="kejian/6.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/06-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/6/1.html" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+				<div class="chapter" style="animation-delay:6s;">
+					<ul class="list">
+						<li class="topical">第七章</li>
+						<li><a href="kejian/7.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/07-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/7/1.html" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+				<div class="chapter" style="animation-delay:7s;">
+					<ul class="list">
+						<li class="topical">第八章</li>
+						<li><a href="kejian/8.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/08-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/8/1.html" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+				<div class="chapter" style="animation-delay:8s;">
+					<ul class="list">
+						<li class="topical">第九章</li>
+						<li><a href="kejian/9.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/09-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/9/1.html" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+				<div class="chapter" style="animation-delay:9s;">
+					<ul class="list">
+						<li class="topical">第十章</li>
+						<li><a href="kejian/10.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/10-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/10/1.html" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+				<div class="chapter" style="animation-delay:10s;">
+					<ul class="list">
+						<li class="topical">第十一章</li>
+						<li><a href="kejian/11.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/11-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/11/1.html" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+				<div class="chapter" style="animation-delay:11s;">
+					<ul class="list">
+						<li class="topical">第十二章</li>
+						<li><a href="kejian/12.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/12-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/12/1.html" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+				<div class="chapter" style="animation-delay:12s;">
+					<ul class="list">
+						<li class="topical">第十三章</li>
+						<li><a href="kejian/13.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/13-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/13-work.txt" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+				<div class="chapter" style="animation-delay:13s;">
+					<ul class="list">
+						<li class="topical">第十四章</li>
+						<li><a href="kejian/14.html" class="iconfont icon-kejianguanli" target="show">课件</a></li>
+						<li><a href="txt/14-note.txt" target="show" class="iconfont icon-homework">笔记</a></li>
+						<li><a href="work/14-work.txt" class="iconfont icon-biji" target="show">作业</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="l-click p-r f-l" onclick="l_click(this)">
+				<i class="fa fa-angle-double-right p-a top50" style="font-size:24px;color:white;"></i>
+			</div>
+		</div>
+	</div>
+	<script>
+		var l_side = document.getElementsByClassName("l-side")[0];
+		var r_side = document.getElementsByClassName("r-side")[0];
+		function l_click(tag){
+			var left = parseInt(l_side.style.left);
+			var i = tag.getElementsByTagName("i")[0];
+			if(left < 0 || l_side.style.left == ""){
+				l_side.style.left = "0px";
+				i.classList.remove("fa-angle-double-right");
+				i.classList.add("fa-angle-double-left");
+				i.style.animationName = "i-r-l";
+			}else{
+				l_side.style.left = "-300px";
+				i.classList.remove("fa-angle-double-left");
+				i.classList.add("fa-angle-double-right");
+				i.style.animationName = "i-l-r";
+			}
+		}
+		function r_click(tag){
+			var right = parseInt(r_side.style.right);
+			var i = tag.getElementsByTagName("i")[0];
+			if(right < 0 || r_side.style.right == ""){
+				r_side.style.right = "0px";
+				i.classList.remove("fa-angle-double-left");
+				i.classList.add("fa-angle-double-right");
+				i.style.animationName = "i-l-r";
+			}else if(right == 0){
+				r_side.style.right = "-700px";
+				i.classList.remove("fa-angle-double-right");
+				i.classList.add("fa-angle-double-left");
+				i.style.animationName = "i-r-l";
+			}
+		}
+	</script>
+</body>
+</html>
